@@ -4,7 +4,15 @@ Fair.fy is a website that showcases exciting fairs in Germany and Europe. Here y
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
