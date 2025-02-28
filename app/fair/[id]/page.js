@@ -96,11 +96,11 @@ export default async function Fair({ params }) {
           alt={fair.name}
           width={2000}
           height={2000}
-          className="h-[150px] w-[150px] shadow-lg rounded-full block mx-auto border-4 border-primary-light absolute bottom-[-75px] left-[7rem] max-md:left-1/2 max-md:-translate-x-1/2"
+          className="h-[175px] w-[175px] shadow-lg rounded-full block mx-auto border-4 border-primary-light absolute bottom-[-87.5px] left-[7rem] max-md:left-1/2 max-md:-translate-x-1/2"
         />
       </div>
 
-      <div className="pt-24 pb-8 px-28 space-y-4 text-dark max-md:px-10">
+      <div className="pt-28 pb-8 px-28 space-y-4 text-dark max-md:px-10">
         <Link href="/" className="text-xs flex items-center gap-x-2 w-fit">
           <ArrowLeftIcon className="size-3" />
           Back to home

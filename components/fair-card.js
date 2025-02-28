@@ -10,14 +10,14 @@ import Link from "next/link";
 
 export default function FairCard({ cardDetails }) {
   return (
-    <div className="bg-white rounded-lg text-dark w-sm overflow-hidden shadow-md hover:scale-[101%] mx-auto group">
-      <div className="h-[200px] p-4">
+    <div className="bg-white rounded-lg text-dark w-xs overflow-hidden shadow-md hover:scale-[101%] mx-auto group">
+      <div className="h-[175px]">
         <Image
           src={`/fairs/${cardDetails.logo}`}
           alt={cardDetails.name}
           width={2000}
           height={2000}
-          className="h-[175px] w-[175px] shadow-lg rounded-full block mx-auto border-4 border-primary-light group-hover:border-secondary/20"
+          className="h-[175px] w-full shadow-lg block mx-auto"
         />
       </div>
 
