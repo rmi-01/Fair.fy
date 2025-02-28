@@ -26,11 +26,11 @@ export const generateMetadata = async ({ params }) => {
 
   return {
     title: fair.name,
-    description: fair.name,
+    description: `${fair.name} is a fair in ${fair.address.city}, ${fair.address.state}`,
     openGraph: {
       type: "article",
       title: fair.name,
-      description: fair.name,
+      description: `${fair.name} is a fair in ${fair.address.city}, ${fair.address.state}`,
       images: [
         {
           url: `/fairs/${fair.cover_img}`,
