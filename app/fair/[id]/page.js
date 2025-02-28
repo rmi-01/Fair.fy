@@ -70,7 +70,7 @@ export default async function Fair({ params }) {
 
   if (!fair) {
     return (
-      <div className="py-48 px-28">
+      <div className="py-48 px-28 max-md:px-10">
         <h1 className="heading font-bold text-center">
           No <span className="text-primary">fair</span> found
         </h1>
@@ -96,16 +96,16 @@ export default async function Fair({ params }) {
           alt={fair.name}
           width={2000}
           height={2000}
-          className="h-[150px] w-[150px] shadow-lg rounded-full block mx-auto border-4 border-primary-light absolute bottom-[-75px] left-[7rem]"
+          className="h-[150px] w-[150px] shadow-lg rounded-full block mx-auto border-4 border-primary-light absolute bottom-[-75px] left-[7rem] max-md:left-1/2 max-md:-translate-x-1/2"
         />
       </div>
 
-      <div className="pt-24 pb-8 px-28 space-y-4 text-dark">
+      <div className="pt-24 pb-8 px-28 space-y-4 text-dark max-md:px-10">
         <Link href="/" className="text-xs flex items-center gap-x-2 w-fit">
           <ArrowLeftIcon className="size-3" />
           Back to home
         </Link>
-        <div className="flex items-center justify-between gap-4 mb-8">
+        <div className="flex items-center justify-between gap-4 mb-8 max-md:flex-col">
           <h1 className="heading">{fair.name}</h1>
           <Link
             href={fair.website}
@@ -117,32 +117,32 @@ export default async function Fair({ params }) {
           </Link>
         </div>
 
-        <p className="flex items-center gap-x-2">
+        <p className="flex items-center gap-x-2 max-md:items-start">
           <CalendarIcon className="size-5" />
           <strong>DATES: </strong>
           {dayjs(fair.start_date).format("DD MMM, YYYY")} -{" "}
           {dayjs(fair.end_date).format("DD MMM, YYYY")}
         </p>
 
-        <p className="flex items-center gap-x-2">
+        <p className="flex items-center gap-x-2 max-md:items-start">
           <BuildingOfficeIcon className="size-5" />
           <strong>BOOTH NUMBER: </strong>
           {fair.booth_number}
         </p>
 
-        <p className="flex items-center gap-x-2">
+        <p className="flex items-center gap-x-2 max-md:items-start">
           <MapPinIcon className="size-5" />
           <strong>ADDRESS: </strong>
           {`${fair.address.street} ${fair.address.house_number}, ${fair.address.zip} ${fair.address.city}, ${fair.address.state}`}
         </p>
 
-        <p className="flex items-center gap-x-2">
+        <p className="flex items-center gap-x-2 max-md:items-start">
           <ClockIcon className="size-5" />
           <strong>DAYS REMAINING: </strong>
           {dayjs(fair.start_date).diff(dayjs(), "day")} days left
         </p>
 
-        <p className="text-xs font-semibold pt-12">
+        <p className="text-xs font-semibold pt-12 max-md:text-center">
           For more information, please visit the website of the fair.
         </p>
       </div>

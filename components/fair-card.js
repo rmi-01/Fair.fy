@@ -41,14 +41,14 @@ export default function FairCard({ cardDetails }) {
           {cardDetails.address.city}, {cardDetails.address.state}
         </p>
 
-        <p className="flex items-center gap-x-2">
+        <p className="flex items-center gap-x-2 mb-4">
           <ClockIcon className="size-4" />
           {dayjs(cardDetails.start_date).diff(dayjs(), "day")} days left
         </p>
 
         <Link
           href={`/fair/${cardDetails.id}`}
-          className="text-primary text-center block border-t pt-2 border-primary-light group-hover:text-secondary"
+          className="text-primary text-center block border-t pt-4 border-primary-light group-hover:text-secondary"
         >
           View Details
         </Link>

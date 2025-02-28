@@ -3,7 +3,7 @@ import fairsData from "@/data/fairs.mock.json";
 
 export default function Home() {
   return (
-    <div className="py-8 px-28">
+    <div className="py-8 px-28 max-md:px-10">
       <h1 className="text-center heading">
         Here are some of the <span className="text-primary">exciting</span>{" "}
         fairs in <span className="text-primary">Deutschland</span>
