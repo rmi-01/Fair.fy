@@ -26,11 +26,21 @@ export const generateMetadata = async ({ params }) => {
 
   return {
     title: fair.name,
-    description: `${fair.name} is a fair in ${fair.address.city}, ${fair.address.state}`,
+    description: `${fair.name} is taking place in ${fair.address.city}, ${
+      fair.address.state
+    } from ${dayjs(fair.start_date).format("DD MMM, YYYY")} till ${dayjs(
+      fair.end_date
+    ).format("DD MMM, YYYY")}`,
     openGraph: {
       type: "article",
       title: fair.name,
-      description: `${fair.name} is a fair in ${fair.address.city}, ${fair.address.state}`,
+      description: `${fair.name} is taking place in ${fair.address.city}, ${
+        fair.address.state
+      } from ${dayjs(fair.start_date).format("DD MMM, YYYY")} till ${dayjs(
+        fair.end_date
+      ).format("DD MMM, YYYY")}`,
+      url: `https://fairfy.vercel.app/fair/${fair.id}`,
+      siteName: "Fair.fy",
       images: [
         {
           url: `/fairs/${fair.cover_img}`,
